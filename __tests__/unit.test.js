@@ -13,11 +13,11 @@ test('phone number 2 is correct', () => {
 });
 
 test('phone number 3 is incorrect', () => {
-expect(functions.isPhoneNumber('911')).toBe(true);
+expect(functions.isPhoneNumber('911')).toBe(false);
 });
 
 test('phone number 4 is incorrect', () => {
-expect(functions.isPhoneNumber('1234-213-532')).toBe(true);
+expect(functions.isPhoneNumber('1234-213-532')).toBe(false);
 });
 
 // Valid email
@@ -28,10 +28,10 @@ test('email 2 is correct', () => {
     expect(functions.isEmail('a@p.com')).toBe(true);
 });
 test('email 3 is incorrect', () => {
-    expect(functions.isEmail('a@pcom')).toBe(true);
+    expect(functions.isEmail('a@pcom')).toBe(false);
 });
 test('email 4 is incorrect', () => {
-    expect(functions.isEmail('AnniePhan')).toBe(true);
+    expect(functions.isEmail('AnniePhan')).toBe(false);
 });
 
 // Strong Password
@@ -42,10 +42,10 @@ test('strong password 2 is correct', () => {
     expect(functions.isStrongPassword('ucsd123')).toBe(true);
 });
 test('strong password 3 is incorrect', () => {
-    expect(functions.isStrongPassword('1234567890ucsd')).toBe(true);
+    expect(functions.isStrongPassword('1234567890ucsd')).toBe(false);
 });
 test('strong password 4 is incorrect', () => {
-    expect(functions.isStrongPassword('abc')).toBe(true);
+    expect(functions.isStrongPassword('abc')).toBe(false);
 });
 
 // is Date
@@ -56,10 +56,10 @@ test('Date 2 is correct', () => {
     expect(functions.isDate('1/1/2000')).toBe(true);
 });
 test('Date 3 is correct', () => {
-    expect(functions.isDate('22/22/22')).toBe(true);
+    expect(functions.isDate('22/22/22')).toBe(false);
 });
 test('Date 4 is correct', () => {
-    expect(functions.isDate('05/21')).toBe(true);
+    expect(functions.isDate('05/21')).toBe(false);
 });
 
 // is HexColor
@@ -70,10 +70,10 @@ test('HexColor 2 is correct', () => {
     expect(functions.isHexColor('0AC')).toBe(true);
 });
 test('HexColor 1 is correct', () => {
-    expect(functions.isHexColor('zzz')).toBe(true);
+    expect(functions.isHexColor('zzz')).toBe(false);
 });
 test('HexColor 1 is correct', () => {
-    expect(functions.isHexColor('#ffff')).toBe(true);
+    expect(functions.isHexColor('#ffff')).toBe(false);
 });
 
 
